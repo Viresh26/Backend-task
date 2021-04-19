@@ -4,6 +4,10 @@ const app = express();
 const pool = require("./db1");
 const port = process.env.PORT || 3000
 
+app.listen(port, () => {
+    console.log("Listening on port 3000");
+});
+
 app.get("/api/branches/autocomplete", async (req, res) => {
 
     try {
@@ -57,6 +61,6 @@ app.get("/api/branches", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log("Listening on port 5000");
-})
+// app.listen(port, () => {
+//     console.log("Listening on port 3000");
+// })
